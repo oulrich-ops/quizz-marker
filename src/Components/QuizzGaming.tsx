@@ -59,9 +59,9 @@ const Quizz: React.FC<Props>=(props: Props) => {
                   
                   `}
                   onClick={() => handleAnswer(index, answer)}
-                  >
-                    {answer}
-                </button>
+                   dangerouslySetInnerHTML={{ __html: answer }}
+                  />
+                
               );
             })}
           </div>
