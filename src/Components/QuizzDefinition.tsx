@@ -10,9 +10,9 @@ interface Props {
 const QuizzDefinition: React.FC<Props> = ({ handleCreate }) => {
 
     const difficulties = [
-        { value: 'easy', label: 'Facile' },
-        { value: 'medium', label: 'Moyenne' },
-        { value: 'hard', label: 'Difficile' }
+        { value: 'easy', label: 'Easy' },
+        { value: 'medium', label: 'Medium' },
+        { value: 'hard', label: 'Hard' }
     ];
 
     const [categories, setCategories] = useState<Category[]>([]);
