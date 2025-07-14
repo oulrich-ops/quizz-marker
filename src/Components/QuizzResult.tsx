@@ -25,8 +25,8 @@ const QuizzResult: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center mt-16">
-      <h1 className="text-2xl mb-4">Résultats du Quizz</h1>
-      <p className="mb-4">Voici vos réponses :</p>
+      <h1 className="text-2xl mb-4">Results</h1>
+      <p className="mb-4">Yours answers :</p>
       <div className="space-y-6 mx-12">
         {questions!.map((q, index) => (
           <div key={index} className="p-4">
@@ -61,7 +61,7 @@ const QuizzResult: React.FC = () => {
           onClick={handleNewQuiz}
           className="px-6 py-2 bg-gray-500 text-white rounded hover:bg-blue-700 w-full"
         >
-          Creer un nouveau quizz
+          Create a new quizz
         </button>
       </div>
     </div>

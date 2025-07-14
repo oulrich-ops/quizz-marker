@@ -10,13 +10,13 @@ const [quizz,setQuizz] = useState<Question[]>([])
 
 const createQuizz = (category:number,difficulty:Difficulty|'') =>{
   if (category === 0 || difficulty === '') {
-    alert("Veuillez sélectionner une catégorie et une difficulté.");
+    alert("Please select category and difficulty.");
     return;
   }
   fetchQuestions(category, difficulty).then((data) => {
     setQuizz(data);
   }).catch((error) => {
-    console.error("Erreur lors de la récupération des questions :", error);
+    console.error("Error :", error);
   });
 
 }
@@ -24,7 +24,7 @@ const createQuizz = (category:number,difficulty:Difficulty|'') =>{
 
   return (
     <div className="flex flex-col items-center justify-center mt-4">
-      <p className="text-2xl mb-2">Quizz marker</p>
+      <p className="text-2xl mb-2">Quizz maker</p>
      <QuizzDefinition handleCreate={createQuizz}/>
       <Quizz  quizz={quizz} />
     </div>
