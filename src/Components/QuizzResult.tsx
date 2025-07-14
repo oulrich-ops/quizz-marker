@@ -1,5 +1,7 @@
 import type { QuestionWithAnswers } from "./QuizzGaming";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 
 interface LocationState {
   questions: QuestionWithAnswers[],
