@@ -19,7 +19,7 @@ const QuizzResult: React.FC = () => {
     navigate('/');
   }
   const score = userAnswers.filter((answr, i) => answr === questions[i].correct_answer).length
-  const scoreBgStyle = score < 2 ? 'bg-red-500' : score <= 3 && score >= 2 ? 'bg-yellow-500' : 'bg-green-200';
+  const scoreBgStyle = score < 2 ? 'bg-red-500' : score <= 3 && score >= 2 ? 'bg-yellow-500' : 'bg-green-500';
 
 
 
