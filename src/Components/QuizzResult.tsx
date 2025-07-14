@@ -11,17 +11,26 @@ interface LocationState {
 const QuizzResult: React.FC = () => {
 
   const location = useLocation();
-  const { questions, userAnswers }: LocationState = location.state || {};
-
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!location.state) {
+      navigate('/');
+    }
+  }, [navigate]);
 
   const handleNewQuiz = () => {
     navigate('/');
   }
+
+    const { questions, userAnswers }: LocationState = location.state;
+
   const score = userAnswers.filter((answr, i) => answr === questions[i].correct_answer).length
   const scoreBgStyle = score < 2 ? 'bg-red-500' : score <= 3 && score >= 2 ? 'bg-yellow-500' : 'bg-green-500';
 
-
+  if (!location.state) {
+    return null;
+  }
 
   return (
     <div className="flex flex-col items-center justify-center mt-16">
