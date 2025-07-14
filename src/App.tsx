@@ -11,13 +11,11 @@ import NotFound from './Components/NotFound';
 function App() {
  return (
         <Router basename="/quizz-marker">
-            <div>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/quizz-result" element={<QuizzResult />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
-            </div>
         </Router>
     );
 }
